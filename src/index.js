@@ -1,4 +1,9 @@
 import './style.css';
+import pancakes from './images/pancakes.jpg';
+import tea from './images/hot-pour.jpg';
+import kitchen from './images/kitchen.jpg';
+import mapleLeaf from './images/maple-leaf.jpg';
+import mountain from './images/mountain.jpg';
 
 document.addEventListener('DOMContentLoaded', function() {
 const content = document.getElementById("content");
@@ -36,10 +41,15 @@ headerContainer.appendChild(headerLinks);
 const introContainer = document.createElement("div");
 introContainer.classList.add("intro-container");
 
+
 // Create Intro Content
 const introContent = document.createElement("div");
-introContent.classList.add("intro");
-introContent.textContent = "Welcome to Maple Mountain Meals";
+introContent.classList.add("intro-content");
+
+// Create Intro Title
+const introTitle = document.createElement("div");
+introTitle.classList.add("intro");
+introTitle.textContent = "Welcome to Maple Mountain Meals";
 
 // Create Intro Subtext
 const introSubtext = document.createElement("div");
@@ -47,12 +57,13 @@ introSubtext.classList.add("subtext");
 introSubtext.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nulla ex labore illum, ea repellat quam, recusandae mollitia laudantium officia necessitatibus. Iusto consequatur magnam esse debitis pariatur deleniti similique obcaecati!";
 
 // Append Subtext to Intro Content
+introContent.appendChild(introTitle);
 introContent.appendChild(introSubtext);
 
 // Create Intro Image
 const introImage = document.createElement("img");
 introImage.classList.add("intro-image");
-introImage.src = "/path/to/your/image.jpg";
+introImage.src = pancakes;
 introImage.alt = "Pancakes covered with Maple Syrup";
 
 // Append Elements to Intro Container
@@ -66,23 +77,23 @@ mainContainer.classList.add("main-container");
 // Array of information objects
 const infoData = [
     { 
-        imagePath: "", 
+        imageSrc: mapleLeaf, 
         altText: "Maple Leaf", 
         textContent: "Every dish, a tribute to Canada's rich heritage." 
     },
     { 
-        imagePath: "", 
+        imageSrc: mountain, 
         altText: "Mountains", 
         textContent: "A taste of Canada's majestic landscapes, on a plate." 
     },
     { 
-        imagePath: "", 
+        imageSrc: tea, 
         altText: "Hot water in mug", 
         textContent: "Hospitality as warm as a Canadian embrace." 
     },
     { 
-        imagePath: "", 
-        altText: "Heart", 
+        imageSrc: kitchen, 
+        altText: "kitchen", 
         textContent: "Where quality meets passion in every dish." 
     }
 ];
@@ -94,7 +105,7 @@ infoData.forEach(data => {
 
     const imgElement = document.createElement("img");
     imgElement.classList.add("info-image", "image-text");
-    imgElement.src = data.imagePath;
+    imgElement.src = data.imageSrc;
     imgElement.alt = data.altText;
 
     const textDiv = document.createElement("div");

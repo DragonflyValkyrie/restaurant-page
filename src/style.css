@@ -1,9 +1,7 @@
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --primary-bg-color: #e2e8f0;
-    --header-bg-color: #FFFFFF;
+    --text-color: #e2e8f0;
     --accent-color: #db7207;
-    --text-color: azure;
     --card-bg-color: lightblue;
     --nav-font: Arial, Helvetica, sans-serif;
 }
@@ -15,6 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #B88E72;
 }
 
 .header-container {
@@ -28,7 +27,7 @@ body {
 .header-container h1 {
     display: flex;
     padding-left: 50px;   
-    color: #F9FAF8;
+    color: var(--text-color);
     font-size: 24px;
 }
 
@@ -38,7 +37,7 @@ body {
     padding-right: 18px;
     gap: 20px;
     font-size: 18px;
-    color: #E5E7Eb;
+    color: var(--text-color);
 }
 
 ul {
@@ -57,6 +56,38 @@ ul {
     text-decoration-thickness: 2px;
 }
 
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 40px;
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    color: var(--text-color);
+}
+
+.intro {
+    font-size: 3rem;
+    
+}
+
+.subtext {
+    font-size: 1rem;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.intro-image {
+    border: 3px solid var(--accent-color);
+    border-radius: 15px;
+    max-width: 350px;
+    max-height: 450px;
+}
+
 .main-container{
     display: flex;
     flex-direction: row;
@@ -65,18 +96,18 @@ ul {
     align-items: center;
     flex: 1;
     gap: 100px;
-    margin-bottom: 80px;
+    margin: 80px 0px;
 }
 
 .info-image {
-    border: 3px solid;
-    border-color: #3882F6;
+    border: 3px solid var(--accent-color);
     border-radius: 15px;
     width: 150px;
     height: 150px;
     text-align: center;
     align-items: center;
     margin-bottom: 15px;
+    object-fit: cover;
 }
 
 .info {
