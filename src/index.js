@@ -32,11 +32,34 @@ for (let i = 0; i < links.length; i++) {
 headerContainer.appendChild(titleElement);
 headerContainer.appendChild(headerLinks);
 
-// Intro container creation
+// Create Intro Container
 const introContainer = document.createElement("div");
+introContainer.classList.add("intro-container");
 
+// Create Intro Content
+const introContent = document.createElement("div");
+introContent.classList.add("intro");
+introContent.textContent = "Welcome to Maple Mountain Meals";
 
-// main container creation
+// Create Intro Subtext
+const introSubtext = document.createElement("div");
+introSubtext.classList.add("subtext");
+introSubtext.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nulla ex labore illum, ea repellat quam, recusandae mollitia laudantium officia necessitatibus. Iusto consequatur magnam esse debitis pariatur deleniti similique obcaecati!";
+
+// Append Subtext to Intro Content
+introContent.appendChild(introSubtext);
+
+// Create Intro Image
+const introImage = document.createElement("img");
+introImage.classList.add("intro-image");
+introImage.src = "/path/to/your/image.jpg";
+introImage.alt = "Pancakes covered with Maple Syrup";
+
+// Append Elements to Intro Container
+introContainer.appendChild(introContent);
+introContainer.appendChild(introImage);
+
+// Main container creation
 const mainContainer = document.createElement("div");
 mainContainer.classList.add("main-container");
 
@@ -84,9 +107,7 @@ infoData.forEach(data => {
     mainContainer.appendChild(infoDiv);
 });
 
-
-
-// footer container creation
+// Footer container creation
 const footerContainer = document.createElement("div");
 footerContainer.classList.add("footer");
 footerContainer.textContent = "DragonflyValkyrie's Maple Mountain Meals 2023";
@@ -99,32 +120,3 @@ content.appendChild(mainContainer);
 content.appendChild(footerContainer);
 
 });
-/* 
-        <div class="intro-container">
-            <div class="intro-content"> 
-                <div class="intro">Welcome to Maple Mountain Meals</div>
-                <div class="subtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nulla ex labore illum, ea repellat quam, recusandae mollitia laudantium officia necessitatibus. Iusto consequatur magnam esse debitis pariatur deleniti similique obcaecati?</div>
-            </div>
-            <div class="intro-image">
-                <img src="/images/" alt="Plate with thick waffles covered in maple syrup">
-            </div>
-        </div>
-
-    <div class="main-section">
-        <div class="info">
-            <img class="info-image image-text" src="/images/" alt="Shiba sleeping in her bed">
-            <div class="text">Every dish, a tribute to Canada's rich heritage.</div>
-        </div>
-        <div class="info">
-            <img class="info-image image-text" src="/images/" alt="Shiba playing with friends">
-            <div class="text">A taste of Canada's majestic landscapes, on a plate.</div>
-        </div>
-        <div class="info">
-            <img class="info-image image-text" src="/images/" alt="Shiba being weird">
-            <div class="text">Hospitality as warm as a Canadian embrace.</div>
-        </div>
-        <div class="info">
-            <img class="info-image image-text" src="/images/" alt="Shiba being weird">
-            <div class="text">Where quality meets passion in every dish.</div>
-        </div>
-    </div> */
