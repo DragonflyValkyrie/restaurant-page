@@ -4,9 +4,10 @@ import tea from './images/hot-pour.jpg';
 import kitchen from './images/kitchen.jpg';
 import mapleLeaf from './images/maple-leaf.jpg';
 import mountain from './images/mountain.jpg';
+import { menuPage } from './menu';
 
 document.addEventListener('DOMContentLoaded', function() {
-const content = document.getElementById("content");
+const contentContainer = document.getElementById("content");
 
 // Header container creatation
 const headerContainer = document.createElement("div");
@@ -28,6 +29,19 @@ for (let i = 0; i < links.length; i++) {
 
     a.textContent = links[i];
     a.href = "#";
+
+    if (links[i] === "Menu") {
+        a.addEventListener('click', function(event) {
+            event.preventDefault();  // Prevent default link behavior
+            
+            // Clear the contentContainer
+            introContainer.innerHTML = '';
+            mainContainer.innerHTML = '';
+
+            // Go to menuPage
+            menuPage();
+        });
+    }
 
     li.appendChild(a);
     headerLinks.appendChild(li);
@@ -125,9 +139,9 @@ footerContainer.textContent = "DragonflyValkyrie's Maple Mountain Meals 2023";
 
 
 // Append the elements to the webpage
-content.appendChild(headerContainer);
-content.appendChild(introContainer);
-content.appendChild(mainContainer);
-content.appendChild(footerContainer);
+contentContainer.appendChild(headerContainer);
+contentContainer.appendChild(introContainer);
+contentContainer.appendChild(mainContainer);
+contentContainer.appendChild(footerContainer);
 
 });

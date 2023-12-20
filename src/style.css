@@ -2,7 +2,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --text-color: #e2e8f0;
     --accent-color: #db7207;
-    --card-bg-color: lightblue;
+    --card-bg-color: #B88E72;
     --nav-font: Arial, Helvetica, sans-serif;
 }
 
@@ -66,8 +66,9 @@ ul {
 .intro-content {
     display: flex;
     flex-direction: column;
-    width: 700px;
+    width: 630px;
     color: var(--text-color);
+    margin-right: 50px;
 }
 
 .intro {
@@ -78,7 +79,7 @@ ul {
 .subtext {
     font-size: 1rem;
     margin-top: 50px;
-    margin-right: 50px;
+    
 }
 
 .intro-image {
@@ -117,6 +118,39 @@ ul {
     max-width: 150px;
     text-align: center;
     align-items: center;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin: 25px;
+}
+
+.content-container .menuItem {
+    background-color: var(--accent-color);
+    border: var(--card-bg-color) 2px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.menuItem p {
+    color: var(--text-color);
+    text-align: left;
+}
+
+.menuItem .itemName {
+    color: var(--text-color);
+    text-align: left;
+}
+
+.img {
+    border: 3px solid var(--accent-color);
+    border-radius: 15px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
 }
 
 .footer {
