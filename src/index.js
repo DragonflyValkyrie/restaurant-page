@@ -32,31 +32,74 @@ for (let i = 0; i < links.length; i++) {
 headerContainer.appendChild(titleElement);
 headerContainer.appendChild(headerLinks);
 
-
+// Intro container creation
 const introContainer = document.createElement("div");
-const mainContainer = document.createElement("div");
-const footerContainer = document.createElement("div");
 
-// Append the elements to the card
+
+// main container creation
+const mainContainer = document.createElement("div");
+mainContainer.classList.add("main-container");
+
+// Array of information objects
+const infoData = [
+    { 
+        imagePath: "", 
+        altText: "Maple Leaf", 
+        textContent: "Every dish, a tribute to Canada's rich heritage." 
+    },
+    { 
+        imagePath: "", 
+        altText: "Mountains", 
+        textContent: "A taste of Canada's majestic landscapes, on a plate." 
+    },
+    { 
+        imagePath: "", 
+        altText: "Hot water in mug", 
+        textContent: "Hospitality as warm as a Canadian embrace." 
+    },
+    { 
+        imagePath: "", 
+        altText: "Heart", 
+        textContent: "Where quality meets passion in every dish." 
+    }
+];
+
+// Loop through the infoData array to create info divs
+infoData.forEach(data => {
+    const infoDiv = document.createElement("div");
+    infoDiv.classList.add("info");
+
+    const imgElement = document.createElement("img");
+    imgElement.classList.add("info-image", "image-text");
+    imgElement.src = data.imagePath;
+    imgElement.alt = data.altText;
+
+    const textDiv = document.createElement("div");
+    textDiv.classList.add("text");
+    textDiv.textContent = data.textContent;
+
+    infoDiv.appendChild(imgElement);
+    infoDiv.appendChild(textDiv);
+
+    mainContainer.appendChild(infoDiv);
+});
+
+
+
+// footer container creation
+const footerContainer = document.createElement("div");
+footerContainer.classList.add("footer");
+footerContainer.textContent = "DragonflyValkyrie's Maple Mountain Meals 2023";
+
+
+// Append the elements to the webpage
 content.appendChild(headerContainer);
 content.appendChild(introContainer);
 content.appendChild(mainContainer);
 content.appendChild(footerContainer);
 
-// Append the card to the container
-//container.appendChild(content);
-
-
 });
-/* <div class="header-container">
-            <h1>Maple Mountain Meals</h1>
-            <ul class="header-links">
-                <li><a href="#" rel="noopenner">Menu</a></li>
-                <li><a href="#" rel="noopenner">About Us</a></li>
-                <li><a href="#" rel="noopenner">Contact Us</a></li>
-            </ul>
-        </div>
-
+/* 
         <div class="intro-container">
             <div class="intro-content"> 
                 <div class="intro">Welcome to Maple Mountain Meals</div>
