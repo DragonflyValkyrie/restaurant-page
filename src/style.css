@@ -94,7 +94,9 @@ ul {
     font-size: 20px;
     color: var(--text-color);
     font-family: var(--nav-font);
-    text-align: center;
     margin-top: auto;
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
