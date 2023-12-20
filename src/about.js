@@ -1,7 +1,7 @@
-const aboutPage = (() => {
+const aboutPage = () => {
 
   
     contentContainer.appendChild(aboutPage);
-  })();
+  };
   
-  export {aboutPage};
+  export { aboutPage };

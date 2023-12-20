@@ -4,52 +4,12 @@ import tea from './images/hot-pour.jpg';
 import kitchen from './images/kitchen.jpg';
 import mapleLeaf from './images/maple-leaf.jpg';
 import mountain from './images/mountain.jpg';
-import { menuPage } from './menu';
+import { loadHeader } from './header.js';
+import { loadFooter } from './footer.js';
+
 
 document.addEventListener('DOMContentLoaded', function() {
 const contentContainer = document.getElementById("content");
-
-// Header container creatation
-const headerContainer = document.createElement("div");
-headerContainer.classList.add("header-container");
-const titleElement = document.createElement("h1");
-titleElement.textContent = "Maple Mountain Meals";
-
-// Navigation links
-let headerLinks = document.createElement('ul');
-headerLinks.classList.add('header-links');
-
-// List of links
-let links = ["Menu", "About Us", "Contact Us"];
-
-// Loop through the header links to make them list items with anchor tags
-for (let i = 0; i < links.length; i++) {
-    let li = document.createElement("li");  
-    let a = document.createElement("a");
-
-    a.textContent = links[i];
-    a.href = "#";
-
-    if (links[i] === "Menu") {
-        a.addEventListener('click', function(event) {
-            event.preventDefault();  // Prevent default link behavior
-            
-            // Clear the contentContainer
-            introContainer.innerHTML = '';
-            mainContainer.innerHTML = '';
-
-            // Go to menuPage
-            menuPage();
-        });
-    }
-
-    li.appendChild(a);
-    headerLinks.appendChild(li);
-}
-
-// Append links to header container
-headerContainer.appendChild(titleElement);
-headerContainer.appendChild(headerLinks);
 
 // Create Intro Container
 const introContainer = document.createElement("div");
@@ -132,16 +92,13 @@ infoData.forEach(data => {
     mainContainer.appendChild(infoDiv);
 });
 
-// Footer container creation
-const footerContainer = document.createElement("div");
-footerContainer.classList.add("footer");
-footerContainer.textContent = "DragonflyValkyrie's Maple Mountain Meals 2023";
-
+loadHeader(contentContainer);
 
 // Append the elements to the webpage
-contentContainer.appendChild(headerContainer);
 contentContainer.appendChild(introContainer);
 contentContainer.appendChild(mainContainer);
-contentContainer.appendChild(footerContainer);
+
+loadFooter(contentContainer);
+
 
 });
