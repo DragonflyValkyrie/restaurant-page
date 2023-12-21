@@ -1,3 +1,5 @@
+import food from './images/food.jpg';
+
 const menuPage = () => {
     const contentContainer = document.getElementById("content");
 
@@ -10,25 +12,43 @@ const menuPage = () => {
             name: "Montreal-Style Smoked Meat Sandwich",
             price: "$2.73",
             desc: "Lorem, deren, trataro, filede, nerada",
-            img: "food.jpg",
+            img: food,
         },
         { 
             name: "Peameal Bacon",
             price: "$10.58",
             desc: "Lorem, deren, trataro, filede, nerada",
-            img: "food.jpg", 
+            img: food, 
         },
         { 
             name: "Tourtière",
             price: "$6.07",
             desc: "Lorem, deren, trataro, filede, nerada",
-            img: "food.jpg",
+            img: food,
         },
         { 
             name: "Butter Tarts",
             price: "$15.43",
             desc: "Lorem, deren, trataro, filede, nerada",
-            img: "food.jpg", 
+            img: food, 
+        },
+        { 
+            name: "Steak",
+            price: "$36.87",
+            desc: "Lorem, deren, trataro, filede, nerada",
+            img: food, 
+        },
+        { 
+            name: "Poutine",
+            price: "$0.85",
+            desc: "Lorem, deren, trataro, filede, nerada",
+            img: food, 
+        },
+        { 
+            name: "Venison",
+            price: "$19.72",
+            desc: "Lorem, deren, trataro, filede, nerada",
+            img: food, 
         }
     ];
   
@@ -38,6 +58,8 @@ const menuPage = () => {
         menuItem.classList.add("menu-item");
 
         const img = document.createElement("img");
+        img.classList.add("img");
+
         img.src = item.img;
         img.alt = item.name;
         menuItem.appendChild(img);

@@ -120,36 +120,31 @@ ul {
     align-items: center;
 }
 
-.content-container {
+.menu-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 25px;
-    margin: 25px;
+    border: 3px solid var(--accent-color);
+    gap: 40px;
+    margin: 40px;
 }
 
-.content-container .menuItem {
-    background-color: var(--accent-color);
+.menu-container .menu-item {
     border: var(--card-bg-color) 2px;
     text-align: center;
     border-radius: 10px;
     padding: 10px;
 }
 
-.menuItem p {
+.menu-item {
     color: var(--text-color);
-    text-align: left;
+    text-align: center;
 }
 
-.menuItem .itemName {
-    color: var(--text-color);
-    text-align: left;
-}
-
-.img {
+.menu-container .img {
     border: 3px solid var(--accent-color);
     border-radius: 15px;
-    width: 150px;
-    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
     margin-bottom: 15px;
 }
 

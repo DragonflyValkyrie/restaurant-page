@@ -19,18 +19,7 @@ const loadHeader = (contentContainer) => {
         const a = document.createElement("a");
 
         a.textContent = links[i];
-        a.href = "#";
-
-        if (links[i] === "Menu") {
-            a.addEventListener('click', function(event) {
-                // Prevent default link behavior
-                event.preventDefault();  
-                
-                // Call the menuPage function
-                menuPage();  
-            });
-        }
-
+       
         li.appendChild(a);
         headerLinks.appendChild(li);
     }
@@ -39,8 +28,8 @@ const loadHeader = (contentContainer) => {
     headerContainer.appendChild(titleElement);
     headerContainer.appendChild(headerLinks);
     
-    // Prepend header container to content
-    contentContainer.prepend(headerContainer);
+    // Append header container to content
+    contentContainer.appendChild(headerContainer);
 };
 
 export { loadHeader };
