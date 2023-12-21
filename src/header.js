@@ -11,7 +11,7 @@ const loadHeader = (contentContainer) => {
     headerLinks.classList.add('header-links');
 
     // List of links
-    const links = ["Menu", "About Us", "Contact Us"];
+    const links = ["Home", "Menu", "About Us", "Contact Us"];
 
     // Loop through the header links to make them list items with anchor tags
     for (let i = 0; i < links.length; i++) {

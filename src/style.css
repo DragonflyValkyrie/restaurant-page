@@ -48,6 +48,7 @@ ul {
     font-family: var(--nav-font);
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 .header-links li a:hover {
@@ -146,6 +147,20 @@ ul {
     max-width: 150px;
     max-height: 150px;
     margin-bottom: 15px;
+}
+
+.about-container {
+    color: var(--text-color);
+    margin: 40px;
+}
+
+.about-titles {
+    text-align: center;
+}
+
+.about-para {
+    border-top: 10px solid #db7207;
+    border-bottom: 10px solid #db7207;
 }
 
 .footer {

@@ -1,5 +1,4 @@
-const contactPage = () => {
-    const contentContainer = document.getElementById("content");
+const contactPage = (contentContainer) => {
 
   
     contentContainer.appendChild(contact);

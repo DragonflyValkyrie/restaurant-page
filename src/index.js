@@ -24,6 +24,13 @@ loadFooter(contentContainer);
     if (target.tagName === 'A') {
         event.preventDefault();
         switch (target.textContent.trim()) {
+            case 'Home':
+                clearPage();
+                loadHeader(contentContainer);
+                loadIntroContent(contentContainer);
+                loadMainContent(contentContainer);
+                loadFooter(contentContainer);
+                break;
             case 'Menu':
                 clearPage();
                 loadHeader(contentContainer);
