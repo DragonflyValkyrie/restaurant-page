@@ -6,4 +6,4 @@ Each section of the restaurant website (e.g., Home, Menu, About Us, Contact Us) 
 
 All JavaScript modules and assets are bundled using Webpack.
 
-Live preview [Here]()
+Live preview [Here](https://dragonflyvalkyrie.github.io/restaurant-page/)
