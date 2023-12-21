@@ -149,16 +149,19 @@ ul {
     margin-bottom: 15px;
 }
 
-.about-container {
+.about-container,
+.contact-container {
     color: var(--text-color);
     margin: 40px;
 }
 
-.about-titles {
+.about-titles,
+.contact-titles {
     text-align: center;
 }
 
-.about-para {
+.about-para,
+.contact-para {
     border-top: 10px solid #db7207;
     border-bottom: 10px solid #db7207;
 }
