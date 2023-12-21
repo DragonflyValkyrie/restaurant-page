@@ -27,8 +27,13 @@ const contactPage = (contentContainer) => {
     parContactContainer.appendChild(p1);
     parContactContainer.appendChild(p2);
 
+    // Create the form container
+    const contactFormContainer = document.createElement("div");
+    contactFormContainer.classList.add("contact-form");
+
     // Create the form element
     const contactForm = document.createElement("form");
+    
 
     // Create input fields, labels, and other form elements here as needed
     const nameLabel = document.createElement("label");
